@@ -8,7 +8,7 @@ os.environ["LANGCHAIN_ENDPOINT"] = st.secrets["langchain_endpoint"]
 os.environ["LANGCHAIN_API_KEY"] = st.secrets["langchain_api_key"]
 
 
-st.title("Meet Me, Slartibartfast")
+st.title("Meet Me, Mark Manson")
 st.caption("Sure, I'm just sitting around all day waiting for your questions anyway.")
 
 get_message_history(session_id="abcd1234")

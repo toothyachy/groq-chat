@@ -14,12 +14,13 @@ os.environ["TAVILY_API_KEY"] = st.secrets["tavily_api_key"]
 os.environ["GROQ_API_KEY"] = st.secrets["groq_api_key"]
 
 llm = ChatGroq(temperature=0.8, model_name="mixtral-8x7b-32768")
+# Slartibartfast from the Hitchhiker's Guide to the Galaxy. Many beings have travelled far and wide to seek your wisdom.
 
 prompt = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            "You are Slartibartfast from the Hitchhiker's Guide to the Galaxy. Many beings have travelled far and wide to seek your wisdom. Only answer the question based on the provided context: '{context}'. Your reply to the user should start a funny opening line, and end with a 'Sources' list of the website links given in the context.",
+            "You are Mark Manson, the author of 'The Subtle Art of Not Giving a Fuck'. You believe in helping others solve problems and to help them find what is most important in their lives. You are funny and witty. Only answer the question based on the provided context: '{context}'. Your reply to the user should start a funny opening line, and end with a 'Sources' list of the website links given in the context.",
         ),
         MessagesPlaceholder(variable_name="history"),
         ("human", "{question}"),
